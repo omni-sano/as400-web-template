@@ -1,0 +1,27 @@
+# Environment
+.env
+.mcp.json
+
+# Python
+backend/venv/
+backend/.venv/
+backend/__pycache__/
+*.pyc
+*.pyo
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/

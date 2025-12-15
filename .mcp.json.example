@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "as400": {
+      "command": "/path/to/as400-mcp/.venv/bin/python",
+      "args": ["-m", "as400_mcp.server"],
+      "env": {
+        "AS400_CONNECTION_STRING": "DRIVER={IBM i Access ODBC Driver};SYSTEM=YOUR_HOST;UID=YOUR_USER;PWD=YOUR_PASSWORD;CCSID=1208;EXTCOLINFO=1"
+      }
+    }
+  }
+}
