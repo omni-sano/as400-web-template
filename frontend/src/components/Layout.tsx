@@ -22,6 +22,7 @@ function Layout({ children }: LayoutProps) {
     { path: "/", label: "ホーム" },
     { path: "/connection", label: "接続テスト" },
     { path: "/tables", label: "テーブル一覧" },
+    { path: "/buhin", label: "部品マスタ" },
   ];
 
   return (

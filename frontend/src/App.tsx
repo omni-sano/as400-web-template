@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import ConnectionTest from "./pages/ConnectionTest";
 import Tables from "./pages/Tables";
+import BuhinMaster from "./pages/BuhinMaster";
 
 const theme = createTheme({
   palette: {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/connection" element={<ConnectionTest />} />
             <Route path="/tables" element={<Tables />} />
+            <Route path="/buhin" element={<BuhinMaster />} />
           </Routes>
         </Layout>
       </BrowserRouter>

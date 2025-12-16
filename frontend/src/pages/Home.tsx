@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
 import TableChartIcon from "@mui/icons-material/TableChart";
+import InventoryIcon from "@mui/icons-material/Inventory";
 
 const menuItems = [
   {
@@ -22,6 +23,12 @@ const menuItems = [
     title: "テーブル一覧",
     description: "ライブラリ内のテーブルを表示します",
     icon: TableChartIcon,
+  },
+  {
+    path: "/buhin",
+    title: "部品マスタ",
+    description: "部品の登録・変更・削除を行います",
+    icon: InventoryIcon,
   },
 ];
 
