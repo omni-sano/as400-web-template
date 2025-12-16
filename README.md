@@ -8,12 +8,12 @@ AS400/IBM iのデータを使ったWebアプリケーション開発用テンプ
 as400-web-template/
 ├── backend/          # FastAPI + pyodbc
 │   ├── main.py
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .env.example  # 環境変数サンプル
 ├── frontend/         # React + TypeScript (Vite)
 │   ├── src/
 │   ├── package.json
 │   └── vite.config.ts
-├── .env.example      # 環境変数サンプル
 ├── CLAUDE.md         # Claude Code用の指示
 └── README.md
 ```
@@ -27,30 +27,26 @@ as400-web-template/
 - IBM i Access ODBC Driver
 - AS400への接続情報
 
-### 環境変数の設定
+### Backend
 
 ```bash
+cd backend
 cp .env.example .env
 ```
 
 `.env`を編集してAS400の接続情報を設定:
 
 ```
-AS400_DSN=YOUR_DSN_NAME
-AS400_USER=YOUR_USER
-AS400_PASSWORD=YOUR_PASSWORD
+AS400_CONNECTION_STRING=DRIVER={IBM i Access ODBC Driver};SYSTEM=YOUR_HOST;UID=YOUR_USER;PWD=YOUR_PASSWORD;CCSID=1208;EXTCOLINFO=1
 ```
 
-### Backend
-
 ```bash
-cd backend
-python -m venv venv
+python -m venv .venv
 
 # Windows
-venv\Scripts\activate
+.venv\Scripts\activate
 # macOS/Linux
-source venv/bin/activate
+source .venv/bin/activate
 
 pip install -r requirements.txt
 uvicorn main:app --reload
